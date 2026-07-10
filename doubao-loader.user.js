@@ -12,7 +12,7 @@
 (function() {
     'use strict';
     
-    const REMOTE_CORE_URL = 'https://cdn.jsdmirror.com/gh/shunlii/doubao@3.6/doubao-core.js';
+    const REMOTE_CORE_URL = 'https://cdn.jsdmirror.com/gh/shunlii/doubao@db3/doubao-core.js';
     const urlWithTimestamp = REMOTE_CORE_URL + '?t=' + new Date().getTime();
 
     GM_addElement('script', {
