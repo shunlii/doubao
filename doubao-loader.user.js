@@ -1,22 +1,11 @@
 // ==UserScript==
-// @name         豆包对话导出工具
+// @name         豆包导出启动器 (Doubao Loader)
 // @namespace    http://tampermonkey.net/
-// @version      1.0
-// @description  极简风格，支持 6 种导出格式。
+// @version      26.0
+// @description  1
 // @author       You
-// @match        https://www.doubao.com/*
-// @grant        GM_addElement
-// @run-at       document-idle
+// @match        *://*.doubao.com/*
+// @grant        none
+// @run-at       document-start
+// @require      https://cdn.jsdmirror.com/gh/shunlii/doubao@main/doubao-exporter.js
 // ==/UserScript==
-
-(function() {
-    'use strict';
-    
-    const REMOTE_CORE_URL = 'https://cdn.jsdmirror.com/gh/shunlii/doubao@main/doubao.js';
-    const urlWithTimestamp = REMOTE_CORE_URL + '?t=' + new Date().getTime();
-
-    GM_addElement('script', {
-        src: urlWithTimestamp,
-        type: 'text/javascript'
-    });
-})();
